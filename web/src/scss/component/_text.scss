@@ -1,0 +1,43 @@
+/* -------------------------------------------------------------------- BLOCK --- */
+div.block {
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 64px;
+
+	// background-color: lime;
+}
+// section.block:nth-child(2n) {
+// 	background-color: red;;
+// }
+
+.text {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	width: 100%;
+	font-size: 24px;
+	padding-right: 20px;
+	color: $inky;
+
+	// background-color: lime;
+
+}
+
+.text p {
+	display: block;
+	width: 100%;
+}
+
+@media (max-width: $breakpoint1) {
+	.text p { font-size: 19px; }
+}
+ 
+@media (max-width: $breakpoint3) {
+	.text p { font-size: 16px; }
+}
+
+@media (max-width: $breakpoint5) {
+	.text p { font-size: 14px; }
+
+}

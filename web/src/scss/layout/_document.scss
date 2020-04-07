@@ -1,0 +1,139 @@
+/*------------------------------------------------------------------------------
+---------------------------------------------------------------------DOCUMENT---
+------------------------------------------------------------------------------*/
+*, 
+*:before, 
+*:after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+}
+
+
+body {
+	background: white;
+	// font-family: $font;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+	
+	font-family: $family;
+	color: $blue;
+}
+
+header, 
+main, 
+footer {
+	position: relative;
+	// display: flex;
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+section {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+h1 {
+	width: 100%;
+	padding: 16px 0;
+	font-size: 64px;
+	font-family: $title;
+
+}
+
+h2 {
+	display: block;
+	width: 100%;
+	padding-top: 64px;
+	padding-bottom: 32px;;
+	font-size: 48px;
+	font-family: $bold;
+	color: $inky;
+}
+
+h3 {
+	font-size: 32px;
+	font-family: $bold;
+	text-transform: uppercase;
+}
+
+
+h4 {
+	font-size: 24px;
+	font-family: $semi;
+}
+
+p {
+	font-size: 19px;
+	line-height: 120%;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: underline;
+	text-decoration-color: $orange;
+	color: black;
+	&:hover {
+		color: $orange;
+		text-decoration: none;
+	}
+	&:visited {
+		color: inherited;
+	}
+}
+
+ul { 
+	list-style: disc;
+}
+
+li { 
+	padding-bottom: 16px;
+}
+
+hr { border-top: 5px dashed $blue; }
+hr:not(:nth-child(2n)) { margin-top: 64px;}
+
+
+@media (max-width: $breakpoint1) {
+	// header { padding: 0 50px;}
+	body { padding: 0 50px; }
+	h1 {font-size: 48px;}
+	p { font-size: 16px; }
+}
+ 
+@media (max-width: $breakpoint2) {
+	nav { height: auto;}
+	nav a { 
+		width: 50%;
+		padding: 8px 0;
+	}
+
+
+}
+
+@media (max-width: $breakpoint3) {
+	body { padding: 0 32px; }
+	h1 {font-size: 48px;}
+	p { font-size: 14px; }
+
+}
+
+@media (max-width: $breakpoint4) {
+	h1 {font-size: 40px;}
+}
+
+@media (max-width: $breakpoint5) {
+	body { padding: 0 16px; }
+
+	h1 {font-size: 32px;}
+	// body { padding: 0 16px; }
+}

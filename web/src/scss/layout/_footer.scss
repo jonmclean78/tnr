@@ -1,0 +1,38 @@
+/* //////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////// FOOTER /// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+footer {
+	@include background();
+	// position: absolute;
+	// margin: 0 auto;
+	// bottom: 0;
+	// left: 50%;
+	// transform: translate(-50%);
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	background-color: lightgrey;
+	min-height: 80px;
+	margin-top: 64px;
+}
+
+div.email {
+	display: block;
+	font-size: 24px;
+	// margin-left: auto;
+	color: $blue;
+}
+
+.email a {
+	font-family: $semi;
+	font-size: 24px;
+	color: $blue;
+}
+
+
+@media (max-width: $breakpoint3) {
+	div.email,
+	.email a { font-size: 14px; }
+}

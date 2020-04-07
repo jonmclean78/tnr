@@ -1,0 +1,23 @@
+/* //////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// Welcome /// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+section.welcome {
+    padding-bottom: 32px 0;
+    margin-bottom: 32px;
+}
+
+.welcome .text {
+    width: 50%;
+}
+
+@media (max-width: $breakpoint2) {
+    .welcome .block {  padding-top: unset; }
+    .welcome .text {
+        width: unset;
+        padding-bottom: 16px;;
+    }
+    .welcome picture {
+        width: 100%;
+    }
+}

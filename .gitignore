@@ -1,5 +1,8 @@
-/lib/*
-/pub/*
-/node_modules
+*/lib/*
+*/pub/*
+*/node_modules
+/.env
+/.idea
+/vendor
 .DS_Store
 

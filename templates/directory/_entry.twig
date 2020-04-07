@@ -1,0 +1,27 @@
+{% extends "_layout/main" %}
+
+{% block main %}
+
+<section class="directory single">
+    <h2>Tisbury Business Directory </h2>
+        <div class="block">
+            <h2>{{ entry.title }}</h2>
+            <div class="text"> {{ entry.description }} </div>
+            <div class="contact">
+                <a href="tel:{{entry.telephone}}">{{entry.telephone}}</a>
+                <a href="mailto:{{entry.email}}">{{entry.email}}</a>
+                <a href="{{entry.url}}">{{entry.website}}</a>
+            </div>
+            {# <time> {{ news.date|date('M d, Y') }}</time> #}
+            {# <p> {{ news.author }}</p> #}
+            {# <div class="text">
+                {{ news.introduction }} 
+            </div> #}
+        </div>
+
+
+
+</section> 
+
+
+{% endblock %}

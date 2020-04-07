@@ -1,0 +1,159 @@
+/* //////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////// HEADER /// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+// header {
+// 	z-index: 5;
+// 	position: fixed;
+// 	top: 0;
+// 	left: 50%;
+// 	transform: translateX(-50%);
+// 	margin-bottom: 328px;
+// 	background-color: white;
+// }
+
+/* -------------------------------------------------------------------- IDENT --- */
+
+div.ident {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+
+	background-color: white;
+}
+
+.ident h2 {
+	width: auto;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	font-size: 32px;
+	text-transform: uppercase;
+}
+
+.square { 
+	display: block;
+	position: absolute;
+	left: -40px;
+	width: 32px;
+	height: 32px;
+	background-color: $orange;
+}	
+
+.telephone {
+	display: block;
+	font-size: 24px;
+	margin-left: auto;
+	color: black;
+}
+
+.telephone a {
+	font-family: $semi;
+	font-size: 24px;
+	color: black;
+}
+
+.ident .social {
+	background-color: blue;;
+}
+
+@media (max-width: 1000px) {
+	.ident h2 { 
+		font-size: 16px;
+	}
+	.square {
+		left: -20px;
+		width: 16px;
+		height: 16px;
+	}
+	.telephone,
+	.telephone a { font-size: 18px; }
+}
+
+/* -------------------------------------------------------------------- BANNER --- */
+
+section.banner {
+	@include background();
+	position: relative;
+	align-items: flex-end;
+	padding: 16px 0;
+	background-color: lightgrey;	
+}
+header .banner a {  text-decoration: none;}
+header .banner h1 {  color: transparent; }
+
+header .banner.small {
+	padding: 16px 0;
+	h1 { font-size: 32px;}
+	h4 { display: none }
+}
+
+
+
+nav {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	// width: 40%;
+	// height: 80px;
+	margin-left: auto;;
+	
+
+	// background-color: $orange;
+}
+
+nav a {
+	// width: 20%;
+	margin-left: 64px;
+	color: $blue;
+	font-size: 24px;
+	text-transform: uppercase;
+
+	// color: $orange;
+}
+
+nav a:hover {color: $orange;}	
+
+@media (max-width: $breakpoint2) {
+	section.banner {
+	}
+	nav {
+		width: 50%;
+		flex-direction: column;
+		// background-color: red;;
+	}
+	nav a {
+		width: auto;
+		font-size: 16px;
+	}
+	header div.social {
+		display: none;
+	}
+
+}
+
+@media (max-width: $breakpoint3) {
+	.ident .square,
+	.ident h2 {
+		display: none;
+	}
+	div.telephone { 
+		width: 100%;
+		padding: 8px 0;
+		text-align: right;
+	}
+	nav a { font-size: 18px;}
+}
+
+@media (max-width: $breakpoint4) {
+	div.telephone { 
+		justify-items: center;
+		text-align: center;
+		a { padding-top: 16px;}
+	}
+}
+

@@ -1,0 +1,104 @@
+/* -------------------------------------------------------------------- CARD --- */
+
+article.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: calc(50% - 16px);
+
+	background-color: lightgrey;
+	border-radius: 20px;
+	padding: 32px;
+	// margin: 0 32px;
+}
+
+article.card:nth-child(2) { margin-left: auto; }
+
+.card h2 {
+	padding-top: unset;
+}
+.card p{ 
+	padding-bottom: 16px; 
+	color: $inky;
+}
+
+.card p:last-of-type { margin-top: auto; }
+
+.card a { color: $blue;}
+
+section.link {
+	justify-content: flex-start;
+}
+ 
+.link > h2 {
+	padding-bottom: 64px;
+}
+
+.link > a {
+	display: flex;
+	width: 20%;
+	border-bottom: 0;
+	text-decoration: none;
+}
+
+.link .text {
+	width: 100%;
+	padding-bottom: 32px;;
+}
+.link .card {
+	width: 100%;
+	padding: 32px;
+	color: $blue;
+	margin-right: 32px;
+}
+
+.link .card:hover {
+	background-color: $inky;
+	color: white;
+	transition: background-color 0.5s ease;
+	p.link {
+		color: white;
+	}
+}
+
+// .link .card:last-child {
+// 	// margin-right: auto;
+// }
+
+.card > h4 {
+	padding-bottom: 16px;
+}
+
+.link .card .link {
+	color: $blue;
+	text-transform: uppercase;
+}
+
+
+
+
+
+
+@media (max-width: $breakpoint1) {
+	.block .text { width: 100%; }
+	.link > a { width: 33.333%;}
+}
+
+@media (max-width: $breakpoint2) { 
+	article.card { width: 100%; }
+	
+	article.card:not(:last-of-type) { margin-bottom: 32px; }
+	.link > a { width: 100%;}
+	.link > a:not(:first-of-type) { padding-top: 32px;}
+}
+
+@media (max-width: $breakpoint3) {
+	
+	.link .card { margin-right: 0px;}
+}
+
+@media (max-width: $breakpoint4) {
+	// .link > a { width: 1000%;}
+	div.block { padding-top: 32px; }
+}
+

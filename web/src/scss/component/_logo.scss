@@ -1,0 +1,31 @@
+/* //////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////// LOGO /// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+a.logo {
+    display: block;
+    width: 240px;
+    height: 175px;
+    // max-width: 20%;
+  
+    background-image: url(../gfx/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    // border: 1px solid red;
+}
+
+// a.logo::before {
+//     display: block;
+//     content: '';
+//     padding-top: 73%;
+// }
+
+@media (max-width: 1000px) {
+    a.logo {
+        width: 120px;
+        height: 88px;
+    }
+    
+}

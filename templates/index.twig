@@ -1,0 +1,158 @@
+{% extends "_layout/main" %}
+
+{% block main %}
+
+<section class="welcome" id="about">
+    <h2>{{  entry.blockTitle}}</h2>
+     <div class="block">
+        <div class="text">
+            {{  entry.blockCopy}}
+        </div>
+         <picture>
+            <img src="/lib/1.jpg" alt="The view down Tisbury High Street">
+        <picture>
+    </div>
+
+    {# <a href="news.php" class="button more">See all News</a> #}
+
+</section>
+
+<section class="help" id="help">
+    <h2>Help</h2>
+     <div class="text">
+        <p>How to give help and how to get help in and around Tisbury.<p>
+    </div>
+    <div class="block">
+        <article class="card">
+            <h2>How we can help you</h2> 
+            <p>If you are self-isolating and need help with shopping, prescriptions, dog walking, local transport, taking your bins out, or just someone to talk to, call the TNR Helpline on <a href="tel:+441747684010">01747 684010</a> or <a href="http://bit.ly/registertisbury" target="_blank">register online</a>.</p>
+        </article>
+
+        <article class="card">
+            <h2>How you can support our community</h2> 
+            <p>Become a TNR volunteer by calling <a href="tel:+441747684010">01747 684010</a> or <a href="http://bit.ly/volunteertisbury" target="_blank">register online</a>.</p>
+            <p> Even if you are over 70 and staying at home as much possible, you can still volunteer by helping on our phone helpline or emails.<p>
+        </article>
+    </div>
+
+    <a href="http://bit.ly/registertisbury" target="_blank" class="button"> Register for Help</a>
+    <a href="http://bit.ly/volunteertisbury" target="_blank" class="button"> Volunteer</a>
+
+</section>
+
+<section class="news" id="latest">
+    <h2>Latest News </h2>
+     {% for news in craft.entries.section('news').limit(3).all() %}
+        <div class="block">
+            <time> {{ news.date|date('D, d M Y') }}</time>
+            <h2>{{ news.title }}</h2>
+            {# <p> {{ news.author }}</p> #}
+            <div class="text">
+                {{ news.introduction }} 
+            </div>
+            <a href="{{ news.url }}" class="button small more">Read more</a>
+        </div>
+
+     {% endfor %}
+
+    <a href="news" class="button cta">See all News</a>
+
+</section> 
+
+<!-- <section class="notice">
+     <div class="block">
+        <div class="text">
+           <h2>Thank you!</h2>
+           <time> Saturday, 21st March 2020 </time>
+           <p>Thanks to everyone who has got in touch and offered their time, energy and expertise.  It is hugely appreciated. </p>
+           <p>Bear with us as we continue to build and update this site, and make it more useable and helpful.</p>
+            <p>We're just getting started, but together we can and will make a difference</p>
+    </div>
+</section> -->
+
+<!-- <section class="notice">
+     <div class="block">
+        <div class="text">
+           <h2>NOTICE: Saturday 21st March 2020 </h2>
+           <p>Please note that Boots Chemist on Tisbury High Street is extremely busy today.  A long queue has formed and the waiting time is approximately 90 minutes.</p>
+            <p>If your medical prescription or shopping is not urgent,  please find another time to collect any non-essential items.</p>
+            <p>Please follow the <a href="https://www.nhs.uk/conditions/coronavirus-covid-19/">official NHS advice </a> and remember: </p>
+            <ul>
+                <li>Maintain a 2m distance between you and others at all times    </li>
+                <li>Hand sanitise before and after handling items delivered to your door and wash your hands for at least 20 seconds with soap and water afterwards</li>
+                <li>Self isolate if anyone in your house has Covid-19 symptoms</li>
+            </ul>
+        </div>
+    </div>
+</section> -->
+
+
+{# <section class="about" id="about">
+     <h2>About</h2>
+    <div class="block">
+        <div class="text">
+            <p>The Tisbury Neighbourhood Response (TNR) is a newly formed team of volunteers supported by the Parish Council working together to help and support our community through the COVID-19 situation.</p>
+             <p>The Tisbury Neighbourhood Response website is a live site and will be updated over the coming days with further useful information, advice and news.</p>
+        </div>
+        <picture>
+            <img src="lib/1.jpg" alt="The view down Tisbury High Street">
+        <picture>
+    </div>
+
+</section> #}
+
+<section class="link help" id="essential">
+    <h2>Essential Links</h2>
+    <div class="text">
+        <p>Need to know information from trusted sources<p>
+    </div>
+
+    <a href="https://www.gov.uk/coronavirus" target="_blank">  
+        <article class="card">
+            <h4 class="label">gov.uk</h4>
+            <p class="description">Official advice from the National Health Service</p>
+            <p class="link">Click here</p>
+        </article>
+    </a>
+
+    <a href="https://www.nhs.uk/conditions/coronavirus-covid-19/" target="_blank">  
+        <article class="card">
+            <h4 class="label">NHS</h4>
+            <p class="description">Official advice from the National Health Service</p>
+            <p class="link">Click here</p>
+        </article>
+    </a>
+
+    <a href="http://www.wiltshire.gov.uk/news" target="_blank">  
+        <article class="card">
+            <h4 class="label">Wiltshire Council</h4>
+            <p class="description">Coronavirus updates and news</p>
+            <p class="link">Click here</p>
+        </article>
+    </a>
+
+    <!-- <a> 
+        <article class="card">
+            <h4 class="label">NHS</h4>
+            <p class="description">Official advice from the National Health Service</p>
+            <p class="link">Click here</p>
+        </article>
+    </a> -->
+
+</section>
+
+
+<section class="link" id="directory">
+    <h2>Directory</h2>
+
+    <div class="text">
+        <p>Many local businesses and service providers are still open and running.  Your support is crucial!</p>
+    </div>
+
+    <a href="directory" class="button cta">Click here to access the Tisbury Directory</a>
+
+
+</section> 
+
+
+{% endblock %}

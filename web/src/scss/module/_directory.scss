@@ -1,0 +1,61 @@
+/* //////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////// DIRECTORY /// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+section.directory {
+    align-items: flex-start;
+}
+
+.directory .block {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 32px;
+    border-radius: 16px;
+    background-color: lightgrey;
+    // border: 1px solid red;
+}
+
+.directory .block h2 {
+    width: 20%; 
+    padding-top: unset; 
+    padding-bottom: unset;
+    font-size: 19px;;
+
+}
+
+.directory .block .text {  width: 30%; }
+
+.directory .block .text p {font-size: 16px; }
+
+.directory .block .contact {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.directory .block .contact a { padding: 8px 0; }
+
+.directory .block .button.more {
+    // margin: unset;
+    width: 20%
+}
+
+@media (max-width: $breakpoint1) {
+    .directory .block .button.more {
+        width: 100%
+    }
+    .directory .block .text {  width: 40%; }
+    .directory .block .contact { width: 40%; }
+
+}
+@media (max-width: 900px) {
+        .directory .block h2 {  
+            width: 100%; 
+            padding-bottom: 16px;
+        }
+        .directory .block .text {  width: 50%; }
+        .directory .block .text p {font-size: 12px; }
+        .directory .block .contact { 
+            width: 50%; 
+            font-size: 12px; 
+        }
+}

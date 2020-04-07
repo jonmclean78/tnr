@@ -1,0 +1,31 @@
+/* //////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// MAIN /// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+main {
+	position: relative;
+	// top: 328px;
+	// width: 100%;
+	// max-width: 1280px;
+	// margin: 0 auto;
+	// margin-top: 328px;
+
+	// padding: 64px 0;
+	// background-color: aliceblue;
+	// padding-bottom: 144px;
+}	
+
+.text p { 
+	font-size: 24px;
+	line-height: 120%;
+}
+
+.text a { 
+	padding: 16px 0;
+}
+
+@media (max-width: $breakpoint4) {
+	.text p { 
+		font-size: 19px;
+	}	
+}

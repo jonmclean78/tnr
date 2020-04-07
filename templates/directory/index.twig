@@ -1,0 +1,30 @@
+{% extends "_layout/main" %}
+
+{% block main %}
+
+<section class="directory">
+    <h2>Tisbury Business Directory </h2>
+     {% for service in craft.entries.section('directory').all() %}
+        <div class="block">
+            <h2>{{ service.title }}</h2>
+            <div class="text"> {{ service.description }} </div>
+            <div class="contact">
+                <a href="tel:{{service.telephone}}">{{service.telephone}}</a>
+                <a href="mailto:{{service.email}}">{{service.email}}</a>
+                <a href="{{service.url}}">{{service.website}}</a>
+            </div>
+            {# <time> {{ news.date|date('M d, Y') }}</time> #}
+            {# <p> {{ news.author }}</p> #}
+            {# <div class="text">
+                {{ news.introduction }} 
+            </div> #}
+            <a href="{{ service.url }}" class="button small more">More</a>
+        </div>
+
+     {% endfor %}
+
+
+</section> 
+
+
+{% endblock %}

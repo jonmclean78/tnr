@@ -1,0 +1,20 @@
+{% extends "_layout/main" %}
+
+{% block main %}
+
+<h2>{{ entry.title}} </h2>
+<p>by {{ entry.author}} </>
+<time> {{ entry.date|date('d-m-y') }}</time>
+{# {% if entry.image.url() is not null %}
+    <picture>
+        <img src="{{ entry.image.one().url() }}" alt="The view down Tisbury High Street">
+    <picture>
+{% endif %} #}
+<div class="text">
+    {{ entry.newsItemCopy }} 
+
+
+</div>
+
+
+{% endblock %}
