@@ -1,0 +1,47 @@
+/* -------------------------------------------------------------- FONT --- */
+
+@font-face {
+  font-family: 'Metropolis Regular';
+  src: url('../font/Metropolis-Regular.eot');
+  src: url('../font/Metropolis-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../font/Metropolis-Regular.woff2') format('woff2'),
+    url('../font/Metropolis-Regular.woff') format('woff'),
+    url('../font/Metropolis-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Metropolis Bold';
+  src: url('../font/Metropolis-Bold.eot');
+  src: url('../font/Metropolis-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../font/Metropolis-Bold.woff2') format('woff2'),
+    url('../font/Metropolis-Bold.woff') format('woff'),
+    url('../font/Metropolis-Bold.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Metropolis SemiBold';
+  src: url('../font/Metropolis-SemiBold.eot');
+  src: url('../font/Metropolis-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../font/Metropolis-SemiBold.woff2') format('woff2'),
+    url('../font/Metropolis-SemiBold.woff') format('woff'),
+    url('../font/Metropolis-SemiBold.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Metropolis ExtraBold';
+  src: url('../font/Metropolis-ExtraBold.eot');
+  src: url('../font/Metropolis-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('../font/Metropolis-ExtraBold.woff2') format('woff2'),
+    url('../font/Metropolis-ExtraBold.woff') format('woff'),
+    url('../font/Metropolis-ExtraBold.ttf') format('truetype');
+  font-style: normal;
+}
+
+
+$family: 'Metropolis Regular', sans-serif;
+$title: 'Metropolis ExtraBold', sans-serif;
+$bold: 'Metropolis Bold', sans-serif;
+$semi: 'Metropolis Bold', sans-serif;

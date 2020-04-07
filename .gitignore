@@ -1,0 +1,5 @@
+/lib/*
+/pub/*
+/node_modules
+.DS_Store
+
